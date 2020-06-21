@@ -1,4 +1,6 @@
 const botconfig = require("./botconfig.json");
+const botsecrets = requre("./botsecrets.json")
+const colors = require("./botconfig.json");
 const Discord = require("discord.js");
 
 const bot = new Discord.Client({disableEveryone: true});
@@ -21,4 +23,4 @@ bot.on('message', async (message) =>{
     }
 })
 
-bot.login(botconfig.token);
+bot.login(botsecrets.token);

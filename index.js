@@ -16,7 +16,7 @@ bot.on('message', async (message) =>{
     let prefix = botconfig.prefix;
     let messageArray = message.content.split(" ");
     let cmd = messageArray[0];
-    let args = messageArray.Slice[0];
+    let args = messageArray.Slice[0].catch();
 
     if(cmd === `${prefix}hello`){
         return message.channel.send("Hello")
